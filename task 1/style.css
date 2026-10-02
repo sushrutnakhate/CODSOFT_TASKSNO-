@@ -1,0 +1,586 @@
+```css
+/* ---------- BASIC SETTINGS ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* ---------- HEADER ---------- */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+    min-height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    color: #172554;
+}
+
+.logo span,
+footer span {
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    width: 90%;
+    max-width: 1150px;
+    min-height: 600px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.small-title {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h2 {
+    font-size: 58px;
+    color: #172554;
+    margin: 8px 0;
+}
+
+.hero h3 {
+    font-size: 25px;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.hero-text > p:not(.small-title) {
+    color: #666;
+    font-size: 17px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    background: #2563eb;
+    color: white;
+    padding: 13px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #172554;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid #2563eb;
+    color: #2563eb;
+}
+
+.btn.outline:hover {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* ---------- PROFILE ---------- */
+
+.profile-box {
+    width: 350px;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dbeafe;
+    border-radius: 50%;
+}
+
+.profile-circle {
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 70px;
+    font-weight: bold;
+
+    border: 15px solid white;
+}
+
+
+/* ---------- COMMON SECTION ---------- */
+
+.section {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 90px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    color: #2563eb;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    color: #172554;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.image-placeholder {
+    height: 360px;
+    background: #dbeafe;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #2563eb;
+    font-size: 28px;
+    font-weight: bold;
+
+    border: 3px dashed #2563eb;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 27px;
+    color: #172554;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.info {
+    margin-top: 25px;
+}
+
+.info p {
+    margin-bottom: 8px;
+}
+
+
+/* ---------- SKILLS ---------- */
+
+.skills-section {
+    max-width: none;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #eef4ff;
+}
+
+.skills-container {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+}
+
+.skill-icon {
+    width: 70px;
+    height: 70px;
+    margin: auto auto 20px;
+
+    background: #dbeafe;
+    color: #2563eb;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.skill-card h3 {
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #777;
+}
+
+
+/* ---------- PROJECTS ---------- */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.project-image {
+    height: 190px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+    font-weight: bold;
+    color: #172554;
+}
+
+.project-image.first {
+    background: #dbeafe;
+}
+
+.project-image.second {
+    background: #e0e7ff;
+}
+
+.project-image.third {
+    background: #e0f2fe;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.project-content a {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+
+/* ---------- RESUME ---------- */
+
+.resume-section {
+    padding: 60px 8%;
+
+    background: #172554;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.resume-section p {
+    color: #93c5fd;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.resume-section h2 {
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+.resume-btn {
+    background: white;
+    color: #172554;
+    padding: 13px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.contact-section {
+    background: #f7f8fc;
+}
+
+.contact-container {
+    display: flex;
+    gap: 60px;
+}
+
+.contact-info,
+.contact-container form {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: 28px;
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form button {
+    border: none;
+    background: #2563eb;
+    color: white;
+
+    padding: 14px;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #172554;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #9ca3af;
+    margin: 5px;
+}
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 70px 0;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .profile-box {
+        width: 280px;
+        height: 280px;
+    }
+
+    .profile-circle {
+        width: 210px;
+        height: 210px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    nav {
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .hero h3 {
+        font-size: 21px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+}
+```
